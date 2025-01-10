@@ -39,8 +39,13 @@ To set up the Quiz Application locally, follow these detailed steps:
    ```bash
    npm install
    ```
+   . Run npm build
 
-5. **Set Environment Variables**  
+   ```bash
+   npm run build
+   ```
+
+6. **Set Environment Variables**  
    Configure the environment file by copying the example file:
    ```bash
    cp .env.example .env
@@ -51,16 +56,16 @@ To set up the Quiz Application locally, follow these detailed steps:
    ```
    Open the `.env` file in a text editor and update it with your database credentials and any other required configurations, such as mail settings and application URL.
 
-6. **Run Migrations and Seed the Database**  
+7. **Run Migrations and Seed the Database**  
    To set up the database schema and seed it with initial data, run:
    ```bash
    php artisan migrate
 
    php artisan migrate --path=/database/migrations/2024_12_19_075839_add_type_to_quizzes_table.php
-php artisan migrate --path=/database/migrations/2024_12_22_130736_create_questions_table.php
-php artisan migrate --path=/database/migrations/2024_12_22_132634_modify_questions_column_in_quizzes_table.php
-php artisan migrate --path=/database/migrations/2024_12_23_162343_create_favorites_table.php
-php artisan migrate --path=/database/migrations/2025_01_08_132537_create_custom_quizzes_table.php
+   php artisan migrate --path=/database/migrations/2024_12_22_130736_create_questions_table.php
+   php artisan migrate --path=/database/migrations/2024_12_22_132634_modify_questions_column_in_quizzes_table.php
+    php artisan migrate --path=/database/migrations/2024_12_23_162343_create_favorites_table.php
+   php artisan migrate --path=/database/migrations/2025_01_08_132537_create_custom_quizzes_table.php
    ```
 Seed the Database
 ```bash
