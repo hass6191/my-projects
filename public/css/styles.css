@@ -1,0 +1,348 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    margin-top: 30px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 10px;
+    display: inline-block;
+    background-color: #fff;
+    color: #2575fc;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #2575fc;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Flex Layout for Main Content */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds spacing between input, select, and button */
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    flex: 1; /* Makes the input field take up available space */
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+    outline: none;
+}
+
+.search-bar select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-bar select:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+/* Logout Button */
+.logout-btn {
+    display: inline-block;
+    padding: 10px 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to right, #ff512f, #dd2476); /* Gradient color */
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(to right, #dd2476, #ff512f); /* Reversed gradient on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+/* Left Content (Quizzes) */
+.left-content {
+    flex: 2;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Tables */
+.quiz-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.quiz-table th,
+.quiz-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.quiz-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.quiz-table tr {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.quiz-table tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.01);
+}
+
+.quiz-table td {
+    vertical-align: middle;
+}
+
+/* Buttons within Table */
+.quiz-table .btn {
+    padding: 8px 15px;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.quiz-table .btn:hover {
+    background-color: #003d80;
+    transform: scale(1.1);
+}
+
+/* XP Progress Section */
+.xp-section {
+    flex: 1;
+    margin: 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInRight 1s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.xp-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.xp-section h2 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.xp-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+}
+
+.xp-progress {
+    height: 100%;
+    background: linear-gradient(to right, #4caf50, #81c784);
+    width: 0;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.4s ease-in-out;
+
+}
+
+/* Achievements and Challenges Section */
+.achievements,
+.upcoming-challenges {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.achievements:hover,
+.upcoming-challenges:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.achievements h3,
+.upcoming-challenges h3 {
+    color: #0056b3;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.achievements ul,
+.upcoming-challenges ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements li,
+.upcoming-challenges li {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #333;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.achievements li:hover,
+.upcoming-challenges li:hover {
+    transform: scale(1.05);
+    background-color: #f0f8ff;
+}
+
+.achievements li::before,
+.upcoming-challenges li::before {
+    content: "⭐";
+    margin-right: 10px;
+    color: #ff9800;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0056b3;
+    color: #fff;
+    margin-top: 20px;
+}
