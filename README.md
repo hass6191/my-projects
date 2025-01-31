@@ -54,9 +54,18 @@ To set up the Quiz Application locally, follow these detailed steps:
 6. **Run Migrations and Seed the Database**  
    To set up the database schema and seed it with initial data, run:
    ```bash
-   php artisan migrate --seed
-   ```
+   php artisan migrate
 
+   php artisan migrate --path=/database/migrations/2024_12_19_075839_add_type_to_quizzes_table.php
+php artisan migrate --path=/database/migrations/2024_12_22_130736_create_questions_table.php
+php artisan migrate --path=/database/migrations/2024_12_22_132634_modify_questions_column_in_quizzes_table.php
+php artisan migrate --path=/database/migrations/2024_12_23_162343_create_favorites_table.php
+php artisan migrate --path=/database/migrations/2025_01_08_132537_create_custom_quizzes_table.php
+   ```
+Seed the Database
+```bash
+php artisan db:seed --class=PredefinedQuizSeeder
+```
 7. **Start the Development Server**  
    Finally, launch the application using the built-in PHP server:
    ```bash
